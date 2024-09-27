@@ -1,0 +1,75 @@
+/*File Name: navbar.css
+//Student Name: Stephanie Figueira
+//StudentID: 301303854
+//Date: 09/24/24*/
+
+/*For top header area of page with logo*/
+.navbar {
+    background-color: rgb(30, 30, 30); /*background color of navbar, you can remove this if you want the nav to be transparent*/
+    height: 8rem;
+    width: 100vw;
+    max-width: 65rem; /*handles how far the nav bar can expand to*/
+    margin: 0 auto;
+    padding: 1rem 2rem; /*left and right padding*/
+    display: flex; /*felxbox display*/
+    align-items: center;
+    justify-content: space-between; /*space between logo and nav links*/
+    position: sticky; /*allows logo to stay in place along with top:0*/
+    top: 0;
+    z-index:3;
+}
+
+/*Targets the logo itself, may not need this only if to change the logo size*/
+.logo {
+    object-fit: cover;
+    height:2rem;
+    width: 3rem;
+}
+
+/*handles navbar links*/
+.desktopMenuListItem {
+    margin: 1rem; /*the space in-between the menu links*/
+    cursor: pointer;
+}
+
+/*handles hover effect on navbar links*/
+.desktopMenuListItem:hover {
+    color: #9CB898;
+    padding-left: 0.5rem;
+    border-left: 3px solid #80bb76;
+}
+
+/*handles "contact me" button"*/
+.desktopMenuBtn {
+    background-color: white;
+    color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/*handles hover effect on "contact me" button*/
+.desktopMenuBtn:hover {
+    transition-property: margin-right;
+    transition-property: background-color;
+    transition-duration: 1s;
+    background-color: #984063;
+}
+
+/*Adjustment for "contact me" img*/
+.desktopMenuImg {
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin: 1rem;
+}
+
+@media screen and (max-width:720px) {
+    .navbar {
+        font-size: 2vw;
+    }
+}

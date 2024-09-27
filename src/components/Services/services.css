@@ -1,0 +1,110 @@
+/*File Name: services.css
+//Student Name: Stephanie Figueira
+//StudentID: 301303854
+//Date: 09/24/24*/
+
+
+#services{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+    margin-top: 12rem;
+}
+
+.serviceList {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+/*handles entire section of your projectBars*/
+.serviceBars {
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left; 
+}
+
+/*handles the 5 skill bars*/
+.skillBar {
+    display: flex; /* you can remove this if when you shrink the images, the text does not look good*/
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(50, 50, 50); /*change the background colour of the sections (divs)*/
+}
+
+/*className of your images in projects.js you will need to make these "thumbnails" clickable so they can popup into bigger viewing*/
+.skillBarImg {
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    object-fit: cover;
+    transition: .5s ease-in-out;
+    border-radius: 0.5rem;
+}
+
+.skillBar:hover .skillBarImg {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+.skillBarText>p {
+    font-size: 0.80rem;
+    font-weight: 200;
+
+}
+
+.modal {
+    display: flex; /* Use flex to center the content */
+    position: fixed; /* Fixed position */
+    z-index: 1000; /* Ensure it’s above other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    max-width: 90%; /* Responsive width */
+    max-height: 90%; /* Responsive height */
+}
+
+.close {
+    position: absolute; /* Position close button */
+    top: 10px; /* Distance from top */
+    right: 25px; /* Distance from right */
+    color: white; /* Close button color */
+    font-size: 30px; /* Font size */
+    font-weight: bold; /* Font weight */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/*Allows the screen to still be viewable as dimension sizes change i.e. if user views on desktop or phone*/
+@media screen and (max-width:720px) {
+    .skillBarText>p {
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:480px) {
+    .skillBarText>p {
+        font-size: 3vw;
+    }
+    .skillBarImg {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+    .skillBarText>h2 {
+        font-size: 5vw;
+    }
+}

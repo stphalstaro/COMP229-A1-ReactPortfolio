@@ -1,0 +1,116 @@
+/*File Name: intro.css
+//Student Name: Stephanie Figueira
+//StudentID: 301303854
+//Date: 09/24/24*/
+
+#intro {
+    height: calc(200vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/*adjusts the position of the image*/
+.bg {
+    position:absolute;
+    top: -1rem;
+    right: 7.5rem; /*adjusts how far left or right the image is*/
+    z-index: -1;
+    object-fit: cover;
+    height:88vh; /*adjusts height of the image*/
+}
+
+/*handles the content on home page*/
+.introContent {
+    height: 100vh;  /*Changes how far N/S the introContent class section is*/
+    width: 70vw;
+    padding: 7rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*handles the "welcome" part of text on home page*/
+.welcome {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+/*handles the "introText" part of text on home page*/
+.introText {
+    color: #9CB898;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+/*handles the "introName" part of text on home page*/
+.introName {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.missionStatement {
+    color: #ad746f;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+/*handles the "introPara" part of text on home page*/
+.introPara {
+    font-size: small;
+    font-weight: 200;
+    letter-spacing: 1px;
+    max-width: 30rem; /*max-width overrides the parent width in #intro*/
+}
+
+/*handles the "aboutBtn" part of text on home page*/
+.aboutBtn {
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: white;
+    color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: -1rem; /* Adjust these values to control height (first value) and width (second value) */
+    border-radius: 2rem;
+    cursor: pointer;
+    max-width: 9rem;
+    margin-top: -8rem;
+}
+
+/*handles "aboutBtn" image*/
+.btnImg {
+    object-fit: cover;
+    height: 2.5rem;
+    margin: 0 0.25rem;
+}
+
+/*handles hover effect on "aboutBtn"*/
+.aboutBtn:hover {
+    transition-property: margin-right;
+    transition-property: background-color;
+    transition-duration: 1s;
+    background-color: #984063;
+}
+
+/*headshot img, font will shift and keep their size if the screen size changes*/
+@media screen and (max-width: 840px) {
+    .bg {
+        right:10vw;
+    }
+
+    .introContent {
+        font-size: 10vw;
+    }
+
+    .welcome {
+        font-size: 4.5vw;
+    }
+    
+}
